@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="messengerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fdo-ht-Etr">
+                                <rect key="frame" x="10" y="776" width="394" height="76"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ztf-qf-m0F">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="John" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6g3-a7-5hp">
+                                                <rect key="frame" x="0.0" y="0.0" width="339" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcZ-rf-RA5">
+                                                <rect key="frame" x="349" y="0.0" width="45" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="9aH-b9-Tni"/>
+                                                    <constraint firstAttribute="height" constant="34" id="EG6-v8-fjV"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="arrow.right.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="JohnSendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9c3-z0-DJn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XNu-t1-Sk8">
+                                        <rect key="frame" x="0.0" y="42" width="394" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sean" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hd7-DP-7L5">
+                                                <rect key="frame" x="0.0" y="0.0" width="339" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vl-oC-gAl">
+                                                <rect key="frame" x="349" y="0.0" width="45" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="AJ9-EY-2TQ"/>
+                                                    <constraint firstAttribute="height" constant="34" id="JzU-Pi-qlo"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="arrow.right.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="SeanSendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fcU-7x-3E5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="USF-Cq-itV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="712"/>
+                                <color key="backgroundColor" red="0.66186696290000002" green="0.88054198029999997" blue="0.67165893320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" rowHeight="130.99999988079071" id="eDO-GI-AjT" customClass="TableViewCell" customModule="messengerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="131"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eDO-GI-AjT" id="QrD-4F-7zE" customClass="TableViewCell" customModule="messengerApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="131"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFa-is-XL0">
+                                                    <rect key="frame" x="20" y="11" width="212" height="109"/>
+                                                    <color key="backgroundColor" systemColor="tintColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="212" id="7zP-Fs-8LB"/>
+                                                        <constraint firstAttribute="height" constant="109" id="wSK-Af-dYM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-WG-nQ4">
+                                                    <rect key="frame" x="174" y="11" width="220" height="109"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PFa-is-XL0" firstAttribute="top" secondItem="QrD-4F-7zE" secondAttribute="topMargin" id="1CA-lX-MJ7"/>
+                                                <constraint firstItem="PFa-is-XL0" firstAttribute="bottom" secondItem="QrD-4F-7zE" secondAttribute="bottomMargin" id="5en-5n-eRI"/>
+                                                <constraint firstItem="PFa-is-XL0" firstAttribute="leading" secondItem="QrD-4F-7zE" secondAttribute="leadingMargin" id="yBy-Qa-438"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="leftChatBox" destination="PFa-is-XL0" id="x0j-tE-3cV"/>
+                                            <outlet property="rightChatBox" destination="X2a-WG-nQ4" id="Imu-QG-LpG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wSK-8f-k8u"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="x51-Tz-5Tb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="fdo-ht-Etr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="8P0-1R-GZg"/>
+                            <constraint firstItem="fdo-ht-Etr" firstAttribute="top" secondItem="USF-Cq-itV" secondAttribute="bottom" constant="20" id="D7F-ZU-qCV"/>
+                            <constraint firstItem="USF-Cq-itV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xsq-pj-noY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fdo-ht-Etr" secondAttribute="trailing" constant="10" id="Zyw-MH-NLp"/>
+                            <constraint firstItem="USF-Cq-itV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ahv-az-evR"/>
+                            <constraint firstItem="USF-Cq-itV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nAc-OI-w1W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fdo-ht-Etr" secondAttribute="bottom" constant="10" id="oAL-8l-o6y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="johnButtonOutlet" destination="qcZ-rf-RA5" id="4f2-eW-5Hc"/>
+                        <outlet property="johnTextField" destination="6g3-a7-5hp" id="cas-p8-K1M"/>
+                        <outlet property="messageTableView" destination="USF-Cq-itV" id="DDE-lt-kve"/>
+                        <outlet property="seanButtonOutlet" destination="9Vl-oC-gAl" id="p4z-HU-qDb"/>
+                        <outlet property="seanTextField" destination="Hd7-DP-7L5" id="r9U-a8-Kkr"/>
+                        <outlet property="textStackView" destination="fdo-ht-Etr" id="Iee-hR-UiE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
