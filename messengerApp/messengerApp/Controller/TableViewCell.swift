@@ -8,19 +8,17 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-    
-    var johnMessage = ""
-    var seanMessage = ""
+        
     @IBOutlet var rightChatBox: UILabel!
     @IBOutlet var leftChatBox: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
             if self.rightChatBox.text != "" {
                 self.rightChatBox.alpha = 1
             } else {
@@ -37,7 +35,6 @@ class TableViewCell: UITableViewCell {
         leftChatBox.layer.cornerRadius = 20
         rightChatBox.layer.masksToBounds = true
         leftChatBox.layer.masksToBounds = true
-        // Configure the view for the selected state
     }
 
 }

@@ -9,6 +9,9 @@ import UIKit
 
 final class MainVC: UIViewController {
     
+    //MARK: Properties
+    private var user1 = ChatCloud(name: "john")
+    private var user2 = ChatCloud(name: "sean")
     @IBOutlet private var textStackView: UIStackView!
     @IBOutlet private var seanButtonOutlet: UIButton!
     @IBOutlet private var johnButtonOutlet: UIButton!
@@ -16,29 +19,7 @@ final class MainVC: UIViewController {
     @IBOutlet private var seanTextField: UITextField!
     @IBOutlet private var johnTextField: UITextField!
     
-    @IBAction private func JohnSendButton(_ sender: UIButton) {
-        view.endEditing(true)
-        if johnTextField.text != "" {
-            myChat.johnChat.append(johnTextField.text!)
-            myChat.seanChat.append("")
-            johnTextField.text = ""
-            messageTableView.reloadData()
-            scrollToBottom()
-        }
-        
-    }
-    
-    @IBAction func SeanSendButton(_ sender: UIButton) {
-        view.endEditing(true)
-        if seanTextField.text != "" {
-            myChat.seanChat.append(seanTextField.text!)
-            myChat.johnChat.append("")
-            seanTextField.text = ""
-            messageTableView.reloadData()
-            scrollToBottom()
-        }
-    }
-    
+    //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         seanButtonOutlet.setTitle("", for: .normal)
@@ -47,25 +28,46 @@ final class MainVC: UIViewController {
         messageTableView.rowHeight = 131
     }
     
+    @IBAction private func johnSendButton(_ sender: UIButton) {
+        view.endEditing(true)
+        if johnTextField.text != "" {
+            user1.chat.append(johnTextField.text!)
+            user2.chat.append("")
+            johnTextField.text = ""
+            messageTableView.reloadData()
+            scrollToBottom()
+        }
+    }
+    
+    @IBAction private func seanSendButton(_ sender: UIButton) {
+        view.endEditing(true)
+        if seanTextField.text != "" {
+            user2.chat.append(seanTextField.text!)
+            user1.chat.append("")
+            seanTextField.text = ""
+            messageTableView.reloadData()
+            scrollToBottom()
+        }
+    }
 }
 
-//MARK: TableView
+//MARK: TableView Extentions
 extension MainVC: UITableViewDelegate, UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myChat.seanChat.count
+        return user2.chat.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! TableViewCell
-        cell.rightChatBox.text = myChat.johnChat[indexPath.row]
-        cell.leftChatBox.text = myChat.seanChat[indexPath.row]
+        cell.rightChatBox.text = user1.chat[indexPath.row]
+        cell.leftChatBox.text = user2.chat[indexPath.row]
 
         return cell
     }
     
     func scrollToBottom(){
         DispatchQueue.main.async {
-            let indexPath = IndexPath(row: myChat.johnChat.count-1, section: 0)
+            let indexPath = IndexPath(row: self.user1.chat.count-1, section: 0)
             self.messageTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
     }
@@ -80,7 +82,6 @@ extension MainVC {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
             view.frame.origin.y -= keyboardHeight
-            
         }
     }
     
@@ -92,5 +93,4 @@ extension MainVC {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
 }

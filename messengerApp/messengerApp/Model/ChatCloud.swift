@@ -7,10 +7,9 @@
 
 import Foundation
 
-var myChat = ChatCloud()
-
 struct ChatCloud {
-    var johnChat = [String]()
-    var seanChat = [String]()
+    var name: String
+    var chat = [String]()
 }
+
 

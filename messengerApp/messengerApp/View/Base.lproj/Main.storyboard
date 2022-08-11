@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -14,22 +14,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="messengerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fdo-ht-Etr">
-                                <rect key="frame" x="10" y="776" width="394" height="76"/>
+                                <rect key="frame" x="10" y="482" width="300" height="76"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ztf-qf-m0F">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="John" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6g3-a7-5hp">
-                                                <rect key="frame" x="0.0" y="0.0" width="339" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="245" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcZ-rf-RA5">
-                                                <rect key="frame" x="349" y="0.0" width="45" height="34"/>
+                                                <rect key="frame" x="255" y="0.0" width="45" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="9aH-b9-Tni"/>
                                                     <constraint firstAttribute="height" constant="34" id="EG6-v8-fjV"/>
@@ -43,15 +43,15 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XNu-t1-Sk8">
-                                        <rect key="frame" x="0.0" y="42" width="394" height="34"/>
+                                        <rect key="frame" x="0.0" y="42" width="300" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sean" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hd7-DP-7L5">
-                                                <rect key="frame" x="0.0" y="0.0" width="339" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="245" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vl-oC-gAl">
-                                                <rect key="frame" x="349" y="0.0" width="45" height="34"/>
+                                                <rect key="frame" x="255" y="0.0" width="45" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="AJ9-EY-2TQ"/>
                                                     <constraint firstAttribute="height" constant="34" id="JzU-Pi-qlo"/>
@@ -67,18 +67,18 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="USF-Cq-itV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="712"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="462"/>
                                 <color key="backgroundColor" red="0.66186696290000002" green="0.88054198029999997" blue="0.67165893320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" rowHeight="130.99999988079071" id="eDO-GI-AjT" customClass="TableViewCell" customModule="messengerApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="131"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainCell" rowHeight="130.99999988079071" id="eDO-GI-AjT" customClass="TableViewCell" customModule="messengerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eDO-GI-AjT" id="QrD-4F-7zE" customClass="TableViewCell" customModule="messengerApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="131"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFa-is-XL0">
-                                                    <rect key="frame" x="20" y="11" width="212" height="109"/>
+                                                    <rect key="frame" x="26" y="21" width="212" height="99"/>
                                                     <color key="backgroundColor" systemColor="tintColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="212" id="7zP-Fs-8LB"/>
@@ -98,9 +98,9 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="PFa-is-XL0" firstAttribute="top" secondItem="QrD-4F-7zE" secondAttribute="topMargin" id="1CA-lX-MJ7"/>
                                                 <constraint firstItem="PFa-is-XL0" firstAttribute="bottom" secondItem="QrD-4F-7zE" secondAttribute="bottomMargin" id="5en-5n-eRI"/>
-                                                <constraint firstItem="PFa-is-XL0" firstAttribute="leading" secondItem="QrD-4F-7zE" secondAttribute="leadingMargin" id="yBy-Qa-438"/>
+                                                <constraint firstItem="PFa-is-XL0" firstAttribute="leading" secondItem="QrD-4F-7zE" secondAttribute="leadingMargin" constant="10" id="Rwd-f4-g9n"/>
+                                                <constraint firstItem="PFa-is-XL0" firstAttribute="top" secondItem="QrD-4F-7zE" secondAttribute="topMargin" constant="10" id="i2R-DD-pw7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

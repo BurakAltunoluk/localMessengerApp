@@ -65,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				60FD2D852897DB6E005B0F41 /* Main.storyboard */,
+				60FD2D8A2897DB6F005B0F41 /* LaunchScreen.storyboard */,
 				60FD2D7F2897DB6E005B0F41 /* AppDelegate.swift */,
 				60FD2D812897DB6E005B0F41 /* SceneDelegate.swift */,
 			);
@@ -105,7 +106,6 @@
 				607BC74A28988D06001808E4 /* View */,
 				60FD2DA428980DB5005B0F41 /* Model */,
 				60FD2D882897DB6F005B0F41 /* Assets.xcassets */,
-				60FD2D8A2897DB6F005B0F41 /* LaunchScreen.storyboard */,
 				60FD2D8D2897DB6F005B0F41 /* Info.plist */,
 			);
 			path = messengerApp;
